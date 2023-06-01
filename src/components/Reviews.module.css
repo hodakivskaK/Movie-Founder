@@ -1,0 +1,18 @@
+.movieReviewList {
+  list-style: none;
+  padding-inline-start: 10px;
+}
+
+.movieReviewItem {
+  margin-bottom: 10px;
+  border-bottom: solid 1px black;
+}
+
+.movieReviewText {
+  padding: 10px;
+  font-weight: 500;
+}
+
+.movieReviewText span {
+  font-weight: 400;
+}

@@ -1,0 +1,28 @@
+.movieCastList {
+  list-style: none;
+  padding-inline-start: 10px;
+}
+
+.movieCastItem {
+  display: flex;
+  margin: 10px;
+  border-bottom: solid 1px black;
+}
+
+.movieCastImg {
+  height: 150px;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.movieCastDescr {
+  margin-top: 10px;
+}
+
+.movieCastText {
+  font-weight: 600;
+}
+
+.movieCastDescr span {
+  font-weight: 400;
+}
