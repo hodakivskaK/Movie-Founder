@@ -7,11 +7,17 @@
   display: flex;
   margin: 10px;
   border-bottom: solid 1px black;
+  gap: 15px;
+}
+
+.movieCastImgBox{
+  width: 200px;
 }
 
 .movieCastImg {
-  height: 150px;
-  margin-right: 10px;
+  display: block;
+  margin: 0 auto;
+  height: 180px;
   padding: 10px;
 }
 
@@ -26,3 +32,4 @@
 .movieCastDescr span {
   font-weight: 400;
 }
+

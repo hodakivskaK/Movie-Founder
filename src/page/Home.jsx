@@ -3,6 +3,7 @@ import { getFetchTrending } from "FetchAPI";
 import { Link } from 'react-router-dom';
 import s from './Home.module.css'
 
+
 export default function Home () {
     const [popularList, setPopularList] = useState([]);
     const [error, setError] = useState(null);
@@ -34,10 +35,7 @@ export default function Home () {
             return <li key={item.id} className={s.movieTrendItem } >
                 <Link to={`/movies/${item.id}`} className={s.movieTrendLink }>
                 {item.title}</Link>
-         
-           </li>
-})
-}
+           </li>})}
         </ul>
        
     </>

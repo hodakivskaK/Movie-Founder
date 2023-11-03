@@ -29,7 +29,7 @@ export const getFetchByQuery = async (query, page = 1) => {
   return url.data.results;
 };
 
-// 1 movie
+// Movie Id
 export const fetchMoviesDetails = async id => {
      const url = await axios.get(
     `${POINTS.movieDetails}/${id}?api_key=${API_KEY}&language=en-US`

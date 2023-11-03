@@ -1,19 +1,14 @@
 import { lazy, Suspense } from 'react'
 import { Route, Routes, Link } from "react-router-dom";
-// import { Movies } from "./Movies";
-// import { Home } from "./Home";
 import s from './App.module.css'
-// import { Cast } from "./Cast";
-// import { Reviews } from "./Reviews";
-// import { MovieDetails } from "./MovieDetails";
-// import { Loader } from './Loader';
 
-const Movies = lazy(() => import("./Movies"));
-const Home = lazy(() => import("./Home"));
-const Cast = lazy(() => import("./Cast"));
-const Reviews = lazy(() => import("./Reviews"));
-const MovieDetails = lazy(() => import("./MovieDetails"));
-const Loader = lazy(() => import("./Loader"));
+
+const Movies = lazy(() => import("./page/Movies"));
+const Home = lazy(() => import("./page/Home"));
+const Cast = lazy(() => import("./components/Cast/Cast"));
+const Reviews = lazy(() => import("./components/Reviews/Reviews"));
+const MovieDetails = lazy(() => import("./components/MovieDetails/MovieDetails"));
+const Loader = lazy(() => import("./components/Loader/Loader"));
 
 export const App = () => {
 

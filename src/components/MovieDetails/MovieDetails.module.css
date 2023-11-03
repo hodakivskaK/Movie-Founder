@@ -1,0 +1,70 @@
+.movieDetail {
+  padding: 30px;
+  display: flex;
+}
+
+.poster {
+  margin-right: 30px;
+}
+
+.movieTitle {
+  margin-bottom: 17px;
+}
+
+.movieOverview {
+  width: 650px;
+  margin-bottom: 22px;
+}
+
+.movieAdditionalSection {
+  padding: 30px;
+}
+
+.movieAddLink {
+  text-decoration: none;
+}
+
+.movieAddItem {
+  padding: 10px;
+  margin: 2px;
+  border: solid 1px rgb(170, 170, 170);
+  width: 150px;
+  font-weight: 700;
+  font-size: larger;
+  color: black;
+}
+
+.movieAddItem:hover {
+  color: rgb(237, 24, 24);
+}
+
+.movieBtn {
+  appearance: none;
+	border: .2em solid rgb(237, 24, 24);
+	background: hsl(0 0 0/0);
+	padding: .45em 1.5em;
+	color: rgb(237, 24, 24);
+	border-radius: 2em;
+	transition: 0.3s;
+
+}
+
+.movieBtn:hover,
+.movieBtn:focus,
+.movieBtn:active {
+	cursor: pointer;
+		background: rgba(219, 24, 24, 0.888);
+		color: #fff;
+}
+
+
+
+.movieBtnIcon{
+  margin-top: -16px;
+  padding: 0;
+height: 15px;
+width: 15px;
+margin: 1px 5px;
+  transition: transform 0.3s;
+
+}

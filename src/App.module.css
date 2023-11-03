@@ -19,6 +19,12 @@ nav {
   text-decoration: none;
   color: black;
   font-weight: 500;
+  transition: 0.3s;
+}
+
+.navLink:hover,
+.navLink:focus {
+  color: rgb(237, 24, 24);
 }
 
 .container {

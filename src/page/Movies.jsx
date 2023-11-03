@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 import { useSearchParams, useLocation  } from 'react-router-dom';
-import { SearchForm } from "./SearchForm"
+import { SearchForm } from "../components/Search Form/SearchForm"
 import {getFetchByQuery} from "FetchAPI";
-import { MovieList } from "./MovieSearchList";
+import { MovieList } from "../components/MovieSearchList/MovieSearchList";
 
 export default function Movies () {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -42,7 +42,6 @@ export default function Movies () {
         setSearchParams({ query: `${name}` });
         console.log(name)
     }
-
 
 
     return <div>

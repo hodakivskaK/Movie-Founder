@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { FaArrowLeft } from 'react-icons/fa';
+
 import { fetchMoviesDetails } from "FetchAPI";
 import s from './MovieDetails.module.css'
 
@@ -31,7 +33,7 @@ export default function MovieDetails ()  {
     return (
         <section>
             {error && <div>ERROR:{error} </div>}
-            <button className={s.movieBtn } onClick={handleSubmit}>Go back</button>
+            <button className={s.movieBtn} onClick={handleSubmit}> <FaArrowLeft className={s.movieBtnIcon}/> </button>
             { movie && (<div className={s.movieDetail }>
                 <img src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} alt={movie.title} className={s.poster} />
                 

@@ -1,0 +1,31 @@
+.searchFormInput {
+	margin-top: 50px;
+	height: 30px;
+	font-size: 16px;
+	appearance: none;
+	border: none;
+	outline: none;
+	border-bottom: .2em solid rgb(237, 24, 24);
+	background: rgba(rgb(237, 24, 24), .2);
+	border-radius: .2em .2em 0 0;
+	padding: .4em;
+
+}
+
+.SearchFormButton {
+	appearance: none;
+	border: .2em solid rgb(237, 24, 24);
+	background: hsl(0 0 0/0);
+	padding: .85em 1.5em;
+	color: rgb(237, 24, 24);
+	border-radius: 2em;
+	transition: 0.3s;
+}
+
+.SearchFormButton:hover,
+.SearchFormButton:focus,
+.SearchFormButton:active {
+	cursor: pointer;
+		background: rgba(219, 24, 24, 0.888);
+		color: #fff;
+}

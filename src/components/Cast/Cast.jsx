@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMoviesCast } from 'FetchAPI';
 import s from "./Cast.module.css"
+import actorImage from '../../Image/Cast/actor-svgrepo-com.png';
 
 export default function Cast()  {
   const [casts, setCasts] = useState([]);
@@ -32,11 +33,21 @@ export default function Cast()  {
         {casts && casts.map(castItem => {
           return (
             <li key={castItem.id} className={s.movieCastItem }>
+              <div className={s.movieCastImgBox}>
+             {castItem.profile_path === null? 
               <img
-                src={`https://image.tmdb.org/t/p/w300${castItem.profile_path}`}
+                src={actorImage}
+                alt={`${castItem.name} `}
+                className={s.movieCastImg}
+              /> : 
+              <img
+              src={`https://image.tmdb.org/t/p/w300${castItem.profile_path}`}
                 alt={`${castItem.name} portrait`}
                 className={s.movieCastImg}
-              />
+              /> 
+              }
+           </div>
+             
               <div className={s.movieCastDescr }>
                 <p className={s.movieCastText }>Name: <span>{castItem.name}</span></p>
                 <p className={s.movieCastText }>Character: <span>{castItem.character}</span></p>

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react'
-import c from './SearchForm.module'
+import s from './SearchForm.module.css'
 
 export const SearchForm = ({onSubmit}) => {
     const [movieSearch, setMovieSearch] = useState("");
@@ -22,9 +22,11 @@ export const SearchForm = ({onSubmit}) => {
     }
 
     return (
-        <form className={c.SearchForm} onSubmit={handleSubmit}>
+        <div className={s.d}>
+        <h1> Find a movie by a title </h1>
+        <form className={s.SearchForm} onSubmit={handleSubmit}>
     <input
-      className={c.SearchFormInput}
+      className={s.searchFormInput}
       type="text"
       autoComplete="off"
       autoFocus
@@ -32,13 +34,13 @@ export const SearchForm = ({onSubmit}) => {
     onChange={handleInput}
             />
             
-            <button type="submit" className={c.SearchFormButton}>
-                <span className="button-label">
-                
+            <button type="submit" className={s.SearchFormButton}>
+                <span className={s.SearchFormButtonLabel}>
         Search
                 </span> 
     </button>
         </form>
+        </div>
     )
 }
 
