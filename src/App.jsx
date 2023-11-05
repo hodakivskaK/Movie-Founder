@@ -17,7 +17,7 @@ export const App = () => {
       <header className={s.header}>
         <nav>
           <Link to="/" end="true" className={s.navLink}>
-            Home
+          Trending
           </Link>
           <Link to="/movies" className={s.navLink}>Movies</Link>
         </nav>

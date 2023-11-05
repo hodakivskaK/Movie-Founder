@@ -2,28 +2,47 @@ import { useEffect, useState } from "react"
 import { getFetchTrending } from "FetchAPI";
 import { Link } from 'react-router-dom';
 import s from './Home.module.css'
+import movieImage from '../Image/movie-recorder-svgrepo-com.png'
 
 
 export default function Home () {
     const [popularList, setPopularList] = useState([]);
     const [error, setError] = useState(null);
-
+    const [page, setPage] = useState(1);
  
+
     useEffect(() => {
-    const fetchTrendingMovies = () => {
-      getFetchTrending()
+      const fetchTrendingMovies = () => {
+        getFetchTrending(page)
+          .then(results => {
+    
+            setPopularList(results);
+          })
+          .catch(error => {
+            setError('Something wrong...');
+          })
+          };
+          
+          fetchTrendingMovies();
+  }, []);
+
+    useEffect(() => {
+    
+        const fetchTrendingMovies = () => {
+      getFetchTrending(page)
         .then(results => {
-          setPopularList(results);
+  
+          setPopularList(prev => { return [...prev, ...results] });
         })
         .catch(error => {
           setError('Something wrong...');
-          console.log(error);
         })
         };
-        
-        fetchTrendingMovies();
-        
-  }, []);
+      
+        if( page!== 1){
+          fetchTrendingMovies()
+        }
+  }, [page]);
     
 
   return <>
@@ -34,9 +53,19 @@ export default function Home () {
         {popularList.map(item => {
             return <li key={item.id} className={s.movieTrendItem } >
                 <Link to={`/movies/${item.id}`} className={s.movieTrendLink }>
-                {item.title}</Link>
+                      {item.poster_path === null? 
+              <img
+                src={movieImage}
+                alt={`poster`}
+               className={s.moviesSearch__poster}
+              /> : 
+              <img src={`https://image.tmdb.org/t/p/w200/${item.poster_path}`} alt="poster" className={s.movieTrend__img } />
+              }
+              
+               <h4>{item.title}</h4> </Link>
            </li>})}
         </ul>
        
+       <button className={s.movieTrend__btn } onClick={() => setPage(prev => prev + 1)}>Load more</button>
     </>
 }

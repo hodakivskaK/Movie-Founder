@@ -1,4 +1,13 @@
-.searchFormInput {
+.searchForm{
+
+	display: flex;
+	width: 600px;
+	margin: 0 auto;
+align-items: flex-end
+}
+
+.searchForm__input {
+	
 	margin-top: 50px;
 	height: 30px;
 	font-size: 16px;
@@ -8,26 +17,28 @@
 	border-bottom: .2em solid rgb(237, 24, 24);
 	background: rgba(rgb(237, 24, 24), .2);
 	border-radius: .2em .2em 0 0;
-	padding: .4em;
-	width: 420px;
+
+width: 100%;
 	padding: 0 10px;
+
 
 }
 
-.SearchFormButton {
+.SearchForm__button {
 	appearance: none;
 	border: .2em solid rgb(237, 24, 24);
-	background: hsl(0 0 0/0);
+	
 	padding: .85em 1.5em;
 	color: rgb(237, 24, 24);
 	border-radius: 2em;
 	transition: 0.3s;
 	margin-left: 15px;
+	height: 40px;
 }
 
-.SearchFormButton:hover,
-.SearchFormButton:focus,
-.SearchFormButton:active {
+.SearchForm__button:hover,
+.SearchForm__button:focus,
+.SearchForm__button:active {
 	cursor: pointer;
 		background: rgba(219, 24, 24, 0.888);
 		color: #fff;

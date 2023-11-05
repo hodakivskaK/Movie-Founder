@@ -24,9 +24,9 @@ export const SearchForm = ({onSubmit}) => {
     return (
         <div className={s.d}>
         <h1> Find a movie by a title </h1>
-        <form className={s.SearchForm} onSubmit={handleSubmit}>
+        <form className={s.searchForm} onSubmit={handleSubmit}>
     <input
-      className={s.searchFormInput}
+      className={s.searchForm__input}
       type="text"
       autoComplete="off"
       autoFocus
@@ -34,8 +34,8 @@ export const SearchForm = ({onSubmit}) => {
     onChange={handleInput}
             />
             
-            <button type="submit" className={s.SearchFormButton}>
-                <span className={s.SearchFormButtonLabel}>
+            <button type="submit" className={s.SearchForm__button}>
+                <span className={s.SearchForm__buttonLabel}>
         Search
                 </span> 
     </button>
