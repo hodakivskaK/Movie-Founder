@@ -13,7 +13,7 @@ export default function Home () {
 
     useEffect(() => {
       const fetchTrendingMovies = () => {
-        getFetchTrending(page)
+        getFetchTrending(1)
           .then(results => {
     
             setPopularList(results);
