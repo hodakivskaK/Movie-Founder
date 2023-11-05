@@ -1,7 +1,7 @@
 .searchForm{
 
 	display: flex;
-	width: 600px;
+
 	margin: 0 auto;
 align-items: flex-end
 }
@@ -23,6 +23,14 @@ width: 100%;
 
 
 }
+
+@media screen and (min-width: 768px) {
+	.searchForm {
+		width: 600px;
+	}
+  
+  }
+  
 
 .SearchForm__button {
 	appearance: none;

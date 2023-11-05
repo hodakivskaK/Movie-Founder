@@ -1,12 +1,11 @@
 .moviesSearch__list {
-
   list-style: none;
   padding-inline-start: 10px;
-  display: block;
+  
   margin: 0 auto;
-  margin-top: 50px;
-  width: 550px;
+  margin-top: 30px;
 }
+  
 
 .moviesSearch__item {
 
@@ -26,12 +25,14 @@
 .moviesSearch__link {
   color: black;
   text-decoration: none; 
-   display: flex;
-   justify-content: space-between;
+   display: flex;  
+   flex-direction: column;
+
 }
 
 .moviesSearch__img{
   height: 130px;
+  width: 86px;
 }
 
 .moviesSearch__poster{
@@ -50,3 +51,24 @@
   font-weight: 600;
   margin-bottom: 7px;
 }
+
+@media screen and (min-width: 768px) {
+	.moviesSearch__list {
+		width: 550px;
+    display: block;
+    margin-top: 50px;
+	}
+
+  .moviesSearch__link {
+    justify-content: space-between;
+    flex-direction: row;
+	}
+  
+  }
+  
+  @media screen and (min-width: 1048px) {
+	.moviesSearch__list {
+		width: 600px;
+	}
+  
+  }
