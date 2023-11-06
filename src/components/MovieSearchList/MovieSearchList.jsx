@@ -1,7 +1,7 @@
 
 import s from './MovieSearchList.module.css'
 import { Link } from 'react-router-dom';
-import movieImage from '../../Image/movie-recorder-svgrepo-com.png';
+import movieImage from '../../Image/POSTER_not_found.jpg';
 
 export const MovieList = ({ movies }) => {
     

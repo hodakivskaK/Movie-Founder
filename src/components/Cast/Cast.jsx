@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMoviesCast } from 'FetchAPI';
 import s from "./Cast.module.css"
-import actorImage from '../../Image/Cast/actor-svgrepo-com.png';
+import actorImage from '../../Image/actor_not_found.jpg';
 
 export default function Cast()  {
   const [casts, setCasts] = useState([]);

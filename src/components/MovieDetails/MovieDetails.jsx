@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
-import { useParams, NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { useParams, NavLink, Outlet, useLocation } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
 
 import { fetchMoviesDetails } from "FetchAPI";
 import s from './MovieDetails.module.css'
+import movieImage from '../../Image/POSTER_not_found.jpg';
 
 export default function MovieDetails ()  {
     const [movie, setMovie] = useState(null);
@@ -11,7 +12,7 @@ export default function MovieDetails ()  {
 
     const { movieId } = useParams();
     const location = useLocation();
-    const navigate = useNavigate();
+
 
     useEffect(() => {
        
@@ -26,24 +27,31 @@ export default function MovieDetails ()  {
       
     }, [movieId]);
 
-    const handleSubmit = () => {
-        navigate(location?.state?.from ?? '/');
-    }
+    const goBack = () => {
+        window.history.back();
+      }
 
     return (
         <section>
             {error && <div>ERROR:{error} </div>}
-            <button className={s.movieBtn} onClick={handleSubmit}> <FaArrowLeft className={s.movieBtnIcon}/> </button>
+            <button className={s.movieBtn} onClick={goBack}> <FaArrowLeft className={s.movieBtnIcon}/> </button>
             { movie && (<div className={s.movieDetail }>
-                <img src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} alt={movie.title} className={s.poster} />
+                {movie.poster_path === null? 
+              <img
+                src={movieImage}
+                alt={`poster`}
+               className={s.movie_posterNot}
+              /> : 
+              <img src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} alt="poster" className={s.poster } />
+              }
                 
-                <div>
+                <div className={s.movieDescrBox}>
                 <h1 className={s.movieTitle }> {movie.title}</h1>
-                <h3 className={s.movieTitle }>User Score {movie.vote_average}</h3>
-                <h3 className={s.movieTitle }>Overview:</h3>
+                <h3 className={s.movieSubTitle }>User Score {movie.vote_average}</h3>
+                <h3 className={s.movieSubTitle }>Overview:</h3>
                 <p className={s.movieOverview }>{ movie.overview}</p>
 
-                 <h3 className={s.movieTitle }>Genres:</h3>
+                 <h3 className={s.movieSubTitle }>Genres:</h3>
                 <p >{movie.genres.map( name  => 
                     name.name.split(" ") ).join(", ")} </p>
 
@@ -51,7 +59,7 @@ export default function MovieDetails ()  {
             </div>) 
             }
             <div className={s.movieAdditionalSection }>
-                  <h2 className={s.movieTitle }>Additional Information</h2>
+                  <h2 className={s.movieSubTitle }>Additional Information</h2>
             <NavLink
             to={`/movies/${movieId}/reviews`}
             className={s.movieAddLink }

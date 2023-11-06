@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { getFetchTrending } from "FetchAPI";
 import { Link } from 'react-router-dom';
 import s from './Home.module.css'
-import movieImage from '../Image/movie-recorder-svgrepo-com.png'
+import movieImage from '../Image/POSTER_not_found.jpg'
 
 
 export default function Home () {
