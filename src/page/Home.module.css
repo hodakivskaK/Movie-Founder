@@ -71,3 +71,25 @@ cursor: pointer;
 background: rgba(219, 24, 24, 0.888);
 color: #fff;
 }
+
+
+.movieTrend__upBtn{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  width: 40px;
+  height: 40px;
+
+  color: red;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+@keyframes example {
+  0%   {color: red;}
+
+  100% {color: rgb(0, 0, 0);}
+}

@@ -1,21 +1,22 @@
 .movieCastList {
+  display: flex;
   list-style: none;
   padding-inline-start: 10px;
+  flex-wrap: wrap;
+  gap: 5px;
+  row-gap: 10px;
 }
 
 .movieCastItem {
   display: flex;
   margin: 10px;
-  border-bottom: solid 1px black;
+width: 340px;
   gap: 15px;
   padding-bottom: 10px;
+  border-bottom: solid 1px black;
 }
 
-.movieCastImgBox{
-  width: 100px;
-  
 
-}
 
 .movieCastImg {
   object-fit: cover;
@@ -23,7 +24,6 @@
   margin: 0 auto;
   width: 100%;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-
 }
 
 .movieCastDescr {

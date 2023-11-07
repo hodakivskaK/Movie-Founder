@@ -3,6 +3,7 @@ import { getFetchTrending } from "FetchAPI";
 import { Link } from 'react-router-dom';
 import s from './Home.module.css'
 import movieImage from '../Image/POSTER_not_found.jpg'
+import { BsFillArrowUpCircleFill } from 'react-icons/bs';
 
 
 export default function Home () {
@@ -45,6 +46,10 @@ export default function Home () {
   }, [page]);
     
 
+  const topFunction = (e) => {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
   return <>
         {error && <div>ERROR : {error} </div>}
     
@@ -67,5 +72,7 @@ export default function Home () {
         </ul>
        
        <button className={s.movieTrend__btn } onClick={() => setPage(prev => prev + 1)}>Load more</button>
+
+       <BsFillArrowUpCircleFill  className={s.movieTrend__upBtn} />
     </>
 }
