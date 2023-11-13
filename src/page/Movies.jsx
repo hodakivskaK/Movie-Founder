@@ -69,7 +69,7 @@ export default function Movies () {
         {error && <div>{error}</div>}
         <SearchForm onSubmit={handleSubmit } />
         {movieSearch && <MovieList movies={movieSearch} prevLocation={location} />}
-        {showBtn > document.documentElement.clientHeight && <BsFillArrowUpCircleFill onClick={topFunction}  className={s.upBtn} /> }
+        {showBtn > document.documentElement.clientHeight && <div className={s.upBtn__box}> <BsFillArrowUpCircleFill onClick={topFunction}  className={s.upBtn} /> </div> }
     </div>
 
 }
