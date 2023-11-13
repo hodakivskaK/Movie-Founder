@@ -90,11 +90,12 @@
 .movieBtn {
   appearance: none;
 	border: .2em solid rgb(237, 24, 24);
-	background: hsl(0 0 0/0);
-	padding: .45em 1.5em;
+
+	padding: 7px 12px 5px 12px;
 	color: rgb(237, 24, 24);
 	border-radius: 2em;
 	transition: 0.3s;
+  background-color: #ffffff00;
 
 }
 

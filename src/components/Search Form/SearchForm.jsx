@@ -35,9 +35,9 @@ export const SearchForm = ({onSubmit}) => {
             />
             
             <button type="submit" className={s.SearchForm__button}>
-                <span className={s.SearchForm__buttonLabel}>
+              
         Search
-                </span> 
+       
     </button>
         </form>
         </div>

@@ -16,17 +16,23 @@
 
 
 }
+
 .moviesSearch__item:hover {
   cursor: pointer;
 }
+
 .moviesSearch__item:hover .moviesSearch__link {
   color: rgb(237, 24, 24);
 }
+
 .moviesSearch__link {
+  display: flex;
+  flex-direction: column;
+ align-items:  center;
   color: black;
   text-decoration: none; 
-   display: flex;  
-width: 100px;
+  gap: 5px;
+
 }
 
 .moviesSearch__img{
@@ -45,17 +51,30 @@ width: 100px;
 }
 
 .moviesSearch__descr{
+  text-align: center;
   font-size: 15px;
 }
 
 .moviesSearch__title{
-  width: 420px;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 7px;
 }
 
 @media screen and (min-width: 768px) {
+  .moviesSearch__title{
+    width: 420px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 7px;
+  }
+
+  
+.moviesSearch__descr{
+  text-align:start;
+
+}
+
 	.moviesSearch__list {
 		width: 550px;
     display: block;
@@ -63,6 +82,7 @@ width: 100px;
 	}
 
   .moviesSearch__link {
+   
     justify-content: space-between;
     flex-direction: row;
 	}

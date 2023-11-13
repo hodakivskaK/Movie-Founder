@@ -10,6 +10,17 @@ export default function Home () {
     const [popularList, setPopularList] = useState([]);
     const [error, setError] = useState(null);
     const [page, setPage] = useState(1);
+    const [showBtn, setShowBtn] = useState(0);
+
+    
+    useEffect(() => {
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleScroll = () => {
+      setShowBtn(window.scrollY);
+  };
  
 
     useEffect(() => {
@@ -47,8 +58,8 @@ export default function Home () {
     
 
   const topFunction = (e) => {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0; 
 }
   return <>
         {error && <div>ERROR : {error} </div>}
@@ -73,6 +84,7 @@ export default function Home () {
        
        <button className={s.movieTrend__btn } onClick={() => setPage(prev => prev + 1)}>Load more</button>
 
-       <BsFillArrowUpCircleFill onClick={topFunction}  className={s.movieTrend__upBtn} />
+       {showBtn > document.documentElement.clientHeight && <BsFillArrowUpCircleFill onClick={topFunction}  className={s.movieTrend__upBtn} /> }
+    
     </>
 }

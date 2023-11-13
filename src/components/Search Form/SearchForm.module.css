@@ -33,7 +33,7 @@ width: 100%;
 .SearchForm__button {
 	appearance: none;
 	border: .2em solid rgb(237, 24, 24);
-	
+	background-color: #ffffff00;
 	padding: .85em 1.5em;
 	color: rgb(237, 24, 24);
 	border-radius: 2em;

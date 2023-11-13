@@ -53,7 +53,7 @@
 .movieTrend__btn{
   display: block;  
   margin:  50px auto 40px auto;
-
+  background-color: #ffffff00;
   appearance: none;
 	border: .2em solid rgb(237, 24, 24);
 	padding: .85em 1.5em;
@@ -76,20 +76,31 @@ color: #fff;
 .movieTrend__upBtn{
   position: fixed;
   right: 20px;
-  bottom: 20px;
+  bottom: 25px;
 
   width: 40px;
   height: 40px;
 
   color: red;
-  animation-name: example;
-  animation-duration: 5s;
+
+  border-radius: 50%;
+  
+  animation-name: btnAnimation;
+  animation-duration: .5s;
   animation-iteration-count: infinite;
-  animation-direction: reverse;
+  animation-direction: alternate;
+
+} 
+
+.movieTrend__upBtn:hover,
+.movieTrend__upBtn:focus{
+  cursor: pointer;
 }
 
-@keyframes example {
-  0%   {color: red;}
 
-  100% {color: rgb(0, 0, 0);}
+
+@keyframes btnAnimation {
+  0%   {  box-shadow: rgba(255, 32, 32, 0.3) 0px 0px 0px 5px, rgba(255, 155, 155, 0.3) 0px 0px 0px 10px;}
+
+  100% {  box-shadow:  rgba(255, 32, 32, 0.3) 0px 0px 0px 10px, rgba(255, 155, 155, 0.3) 0px 0px 0px 15px;}
 }
