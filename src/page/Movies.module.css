@@ -5,7 +5,7 @@
   width: 65px;
   height: 65px;
 
-  border: 1px red solid;
+
 }
 
 .upBtn{
@@ -17,7 +17,7 @@
     height: 40px;
   
     border-radius: 50%;
-    color: rgb(248, 0, 211);
+    color: rgb(230, 0, 0);
   
     animation-name: btnAnimation;
     animation-duration: .7s;
@@ -34,7 +34,7 @@
   
   
   @keyframes btnAnimation {
-  0%   {  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px 1px, rgba(0, 0, 0, 0.3) 0px 0px 0px 3px;}
+  0%   {  box-shadow: rgba(255, 0, 0, 0.3) 0px 0px 0px 1px, rgba(255, 0, 0, 0.3) 0px 0px 0px 3px;}
   
-    100% {  box-shadow:  rgba(117, 117, 117, 0.3) 0px 0px 0px 5px, rgba(175, 175, 175, 0.3) 0px 0px 0px 12px;} 
+    100% {  box-shadow:  rgba(255, 0, 0, 0.3) 0px 0px 0px 5px, rgba(255, 0, 0, 0.3) 0px 0px 0px 12px;} 
   }
