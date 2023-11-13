@@ -86,7 +86,6 @@ export default function Home () {
        
        <button className={s.movieTrend__btn } onClick={() => setPage(prev => prev + 1)}>Load more</button>
 
-       {showBtn > document.documentElement.clientHeight && <div className={s.upBtn__box}> <BsFillArrowUpCircleFill onClick={topFunction}  className={s.upBtn} /> </div> }
     
     </>
 }
