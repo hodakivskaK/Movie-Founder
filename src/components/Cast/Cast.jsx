@@ -44,7 +44,7 @@ export default function Cast()  {
               src={`https://image.tmdb.org/t/p/w300${castItem.profile_path}`}
                 alt={`${castItem.name} portrait`}
                 className={s.movieCastImg}
-               
+          
               /> 
               }
            </div>
