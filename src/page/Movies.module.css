@@ -1,5 +1,3 @@
-
-
 .upBtn{
     position: fixed;
     right: 20px;
@@ -10,7 +8,7 @@
   
     color: rgb(0, 0, 0);
   
-    border-radius: 50%;
+
     
     animation-name: btnAnimation;
     animation-duration: .5s;
