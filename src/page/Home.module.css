@@ -73,7 +73,7 @@ color: #fff;
 }
 
 
-.movieTrend__upBtn{
+.upBtn{
   position: fixed;
   right: 20px;
   bottom: 25px;
@@ -92,8 +92,8 @@ color: #fff;
 
 } 
 
-.movieTrend__upBtn:hover,
-.movieTrend__upBtn:focus{
+.upBtn:hover,
+.upBtn:focus{
   cursor: pointer;
 }
 

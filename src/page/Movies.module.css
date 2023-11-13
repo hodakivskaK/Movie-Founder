@@ -1,0 +1,33 @@
+
+
+.upBtn{
+    position: fixed;
+    right: 20px;
+    bottom: 25px;
+  
+    width: 40px;
+    height: 40px;
+  
+    color: rgb(0, 0, 0);
+  
+    border-radius: 50%;
+    
+    animation-name: btnAnimation;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  
+  } 
+  
+  .upBtn:hover,
+  .upBtn:focus{
+    cursor: pointer;
+  }
+  
+  
+  
+  @keyframes btnAnimation {
+    0%   {  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px 5px, rgba(0, 0, 0, 0.3) 0px 0px 0px 10px;}
+  
+    100% {  box-shadow:  rgba(117, 117, 117, 0.3) 0px 0px 0px 10px, rgba(175, 175, 175, 0.3) 0px 0px 0px 15px;}
+  }

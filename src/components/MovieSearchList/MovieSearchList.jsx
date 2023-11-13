@@ -6,7 +6,7 @@ import movieImage from '../../Image/POSTER_not_found.jpg';
 export const MovieList = ({ movies }) => {
     
 
-    return <ul className={s.moviesSearch__list }>
+    return <><ul className={s.moviesSearch__list }>
         {movies.map(movie => {
         const releaseDate= movie.release_date.split('-')
         const result = releaseDate[0];
@@ -33,4 +33,6 @@ export const MovieList = ({ movies }) => {
         </li>})}
         
     </ul>
+    
+    </>
 }
